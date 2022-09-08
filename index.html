@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <title>MYLO Group</title>
+</head>
+<body>
+    <div class="hero">
+        <h2>MYLO Group</h2>
+        <h3>It is reliable, fast and simple.</h3>
+        <video autoplay muted src="./back.mkv"></video>
+    
+    <div class="menu">
+        <nav>
+            <ul>
+                <li id="one"><a href="#about">About</a></li>
+                <li id="two"><a href="#price">Price</a></li>
+                <li id="three"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+    <div class="block about" id="about">
+        <div class="image">
+            <img src="./about.png" alt="" id="about__image">
+        </div>
+        <div class="info">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse rem ut sunt. Nihil, repellendus eius laborum, tempora nesciunt error deleniti, nemo optio laudantium tenetur expedita natus? Dolor nam corrupti tempora?</p>
+        </div>
+    </div>
+    <div class="block price" id="price">
+        <div class="info">
+            <h2>Price</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse rem ut sunt. Nihil, repellendus eius laborum, tempora nesciunt error deleniti, nemo optio laudantium tenetur expedita natus? Dolor nam corrupti tempora?</p>
+        </div>
+        <div class="image">
+            <img src="./price.png" alt="" id="price__image">
+        </div>
+        
+    </div>
+    <div class="block contact" id="contact">
+        
+        <div class="image">
+            <img src="./contact.png" alt="" id="contact__image">
+        </div>
+        <div class="info">
+            <h2>Contact</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse rem ut sunt. Nihil, repellendus eius laborum, tempora nesciunt error deleniti, nemo optio laudantium tenetur expedita natus? Dolor nam corrupti tempora?</p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="./script.js"></script>
+    <script>
+        $(window).scroll(function() {
+            $('#about__image').each(function(){
+            var imagePos = $(this).offset().top;
+    
+            var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow+500) {
+                    $(this).addClass("bigEntrance");
+                }
+            });
+        });
+        $(window).scroll(function() {
+            $('#price__image').each(function(){
+            var imagePos = $(this).offset().top;
+    
+            var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow+500) {
+                    $(this).addClass("bigEntrance");
+                }
+            });
+        });
+        $(window).scroll(function() {
+            $('#contact__image').each(function(){
+            var imagePos = $(this).offset().top;
+    
+            var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow+500) {
+                    $(this).addClass("bigEntrance");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
